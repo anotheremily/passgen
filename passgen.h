@@ -38,16 +38,16 @@
 **/
 void intro();
 
-void passgen( int, int, int );
+void passgen(int, int, int);
 
 /**
  * int generate( int l, int s )
  * Generates a password with length of and strength of s
 **/
-void generate( int, int );
+void generate(int, int);
 
 /**
  * int getValue( int s )
  * Generates one random character based on the specified strength
 **/
-char getValue( int );
+char getValue(int);
