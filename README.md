@@ -1,7 +1,7 @@
 Passgen
 =======
 Password Generation Utility
-Zach Young <zach@zavtralabs.com>
+by Zach Young <zach@zavtralabs.com>
 
 I'm sure there are better ones out there, but I wrote this ages ago, and 
 it's still useful. When cryptographic perfection isn't necessary, this 
@@ -19,8 +19,6 @@ Use
 
 Parameters
 ----------
--n=<num>	Number of passwords to generate
--l=<num>	Length of passwords
--s=<num>	Strength (1 = [0-9], 2 = [0-9a-z], 3 = [0-9A-Za-z], 4 = [0-9A-Za-z] + special chars
-
-
+* -n=<num>	Number of passwords to generate
+* -l=<num>	Length of passwords
+* -s=<num>	Strength (1 = [0-9], 2 = [0-9a-z], 3 = [0-9A-Za-z], 4 = [0-9A-Za-z] + special chars
