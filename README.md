@@ -1,26 +1,32 @@
-Passgen 2.0
+Passgen
+=======
 Password Generation Utility
-Zach Young
-young dot zach at gmail dot com
+Zach Young <zach@zavtralabs.com>
 
-CONTENTS:
-passgen.h	Password generation definitions
-passgen.c	Password generation source
-driver.c	Driver source
+I'm sure there are better ones out there, but I wrote this ages ago, and 
+it's still useful. When cryptographic perfection isn't necessary, this 
+works pretty well.
+
+CONTENTS
+--------
+src/passgen.h	Password generation definitions
+src/passgen.c	Password generation source
+src/driver.c	Driver source
 makefile	Make file for the program
 COPYING		A copy of the GNU GPL license
 README		This information file
 
-USE:
+USE
+---
 ./passgen
 
 PARAMETERS
+----------
 -n=<num>	Number of passwords to generate
 -l=<num>	Length of passwords
--s=<num>	Strength [NOT IMPLEMENTED]
-
-NOTES:
-All features have not been implemented. 
+-s=<num>	Strength (1 = [0-9], 2 = [0-9a-z], 3 = [0-9A-Za-z], 4 = [0-9A-Za-z] + special chars
 
 BUILDING
-To build the source type 'make' on the command line. This program was built in Linux using GCC. Other compilers should also work, but it has not been tested.
+To build type `make`. Executable can be moved wherever is convenient. 
+This program was built on Linux and Mac OS X using GCC. Other compilers 
+should also work, but none have been tested.
