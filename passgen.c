@@ -17,71 +17,70 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-**/  
+*/  
 #include "passgen.h"
-void intro()
+void intro()
 {
-    printf("Passgen 2.0\n");
-    printf("Written by Zach Young\n");
-    printf("Copyright 2004, 2005, 2006 Zach Young\n");
-    printf
-	("This is free software; see the source for copying conditions.  There is NO\n");
-    printf
-	("warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n");
-    return;
-}
+    printf("Passgen 2.0\n");
+    printf("Written by Zach Young\n");
+    printf("Copyright 2004, 2005, 2006 Zach Young\n");
+    printf("This is free software; see the source for copying conditions.  There is NO\n");
+    printf("warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n");
+    return;
+}
 
- void passgen(int num, int length, int strength)
+ void passgen(int num, int length, int strength)
 {
-    int idx;
-    srand(time(NULL));
-    for (idx = 0; idx < num; idx++) {
-	generate(length, strength);
-    }
-    return;
-}
+    int idx;
+    srand(time(NULL));
+    for (idx = 0; idx < num; idx++) {
+        generate(length, strength);
+    }
+    return;
+}
 
- void generate(int l, int s)
+ void generate(int l, int s)
 {
-    int idx;
-    for (idx = 0; idx < l; idx++) {
-	printf("%c", getValue(s));
-    }
-    printf("\n");
-    return;
-}
+    int idx;
+    for (idx = 0; idx < l; idx++) {
+        printf("%c", getValue(s));
+    }
+    printf("\n");
+    return;
+}
 
- char getValue(int s)
+ char getValue(int s)
 {
-    char c;
-    int idx;
-    int l;
-    int o;
-    int type = rand() % s;
-    switch (type) {
-    case 0:
-	l = 10;
-	o = 48;
-	break;
-    case 1:
-	l = 26;
-	o = 97;
-	break;
-    case 2:
-	l = 26;
-	o = 65;
-	break;
-    case 3:
-	l = 15;
-	o = 33;
-	break;
-    default:
-	l = 26;
-	o = 97;
-    }
+    char c;
+    int idx;
+    int l;
+    int o;
+    int type = rand() % s;
+
+    switch (type) {
+        case 0:
+            l = 10;
+            o = 48;
+            break;
+        case 1:
+            l = 26;
+            o = 97;
+            break;
+        case 2:
+            l = 26;
+            o = 65;
+            break;
+        case 3:
+            l = 15;
+            o = 33;
+            break;
+        default:
+            l = 26;
+            o = 97;
+    }
     
 	/* get the length (l) and offset (o) for a type of character */ 
 	return rand() % l + o;
-}
+}
 
 

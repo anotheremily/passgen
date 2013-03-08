@@ -23,11 +23,10 @@
 
 int parameter(char *);
 
-int main(int argv, char *argc[])
-{
-    int num = 10;
-    int length = 8;
-    int strength = MEDIUM;
+int main(int argv, char *argc[]) {
+    int num = 20;
+    int length = 12;
+    int strength = VERYSTRONG;
     int idx;
     int error;
 
@@ -70,8 +69,7 @@ int main(int argv, char *argc[])
     return 0;
 }
 
-int parameter(char *arg)
-{
+int parameter(char *arg) {
     int value = 1;		/* initial value of error */
     int lcv;
     int index = 0;
@@ -79,20 +77,21 @@ int parameter(char *arg)
     char temp[50];
 
     if (strlen(arg)) {
-	for (lcv = 0; lcv < strlen(arg); lcv++) {
-	    if (record) {
-		temp[index] = arg[lcv];
-		index++;
-	    }
-	    if (arg[lcv] == '=')
-		record = 1;
-	}
-	temp[index] = '\0';
-	//printf( "xx %s x %dx", temp, strlen( temp ) );
-	value = strtol(temp, NULL, 10);
+        for (lcv = 0; lcv < strlen(arg); lcv++) {
+            if (record) {
+                temp[index] = arg[lcv];
+                index++;
+            }
+            if (arg[lcv] == '=') {
+                record = 1;
+            }
+        }
+        temp[index] = '\0';
+        //printf( "xx %s x %dx", temp, strlen( temp ) );
+        value = strtol(temp, NULL, 10);
     } else {
-	printf("Error resolving parameters.\n");
-	value = -1;
+        printf("Error resolving parameters.\n");
+        value = -1;
     }
     return value;
 }
