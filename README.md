@@ -15,10 +15,10 @@ should also work, but none have been tested.
 
 Use
 ---
-./passgen
+`./passgen`
 
 Parameters
 ----------
-* -n=<num>	Number of passwords to generate
-* -l=<num>	Length of passwords
-* -s=<num>	Strength (1 = [0-9], 2 = [0-9a-z], 3 = [0-9A-Za-z], 4 = [0-9A-Za-z] + special chars
+* -n=<num> Number of passwords to generate
+* -l=<num> Length of passwords
+* -s=<num> Strength (1 = [0-9], 2 = [0-9a-z], 3 = [0-9A-Za-z], 4 = [0-9A-Za-z] + special chars)
